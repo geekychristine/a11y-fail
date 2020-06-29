@@ -1,0 +1,23 @@
+{
+  "name": "a11y-fail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --port 7777 --open local --index index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekychristine/a11y-fail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geekychristine/a11y-fail/issues"
+  },
+  "homepage": "https://github.com/geekychristine/a11y-fail#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
