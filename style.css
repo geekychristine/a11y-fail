@@ -1,0 +1,28 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  background: #5f6252;
+  color: white;
+}
+
+.layout {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+/* Products =========== */
+.product-container {
+  display: block;
+  padding: 20px;
+  width: 80%;
+}
+
+/* Cart =========== */
+.cart-container {
+  display: block;
+  padding: 20px;
+  width: 20%;
+  min-width: 300px;
+  background: #abcdef;
+}
