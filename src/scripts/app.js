@@ -24,6 +24,14 @@ class Product {
   }
 }
 
+class Cart {
+  init() {
+    // Create Session Storage Cart (Move this to cart.js eventually)
+    const cart = { items: [], total: 0.0 };
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+  }
+}
+
 class App {
   init() {
     // Initialize on Load.
@@ -31,6 +39,9 @@ class App {
       // Initialize all the things
       const product = new Product();
       product.init();
+
+      const cart = new Cart();
+      cart.init();
     };
   }
 }
