@@ -16,19 +16,24 @@ class Cart {
     return JSON.parse(sessionStorage.getItem("cart"));
   }
 
+  renderItem(item) {
+    return `<li class="cart--product cart--product-${item.id}" data-id="${item.id}">
+        ${item.product} $${item.cost}
+      </li>`;
+  }
+
   renderCart() {
     // Get Fresh Cart Data
     const cart = this.getCart();
 
     let inventory = "";
-
     cart.items.forEach(item => {
-      inventory += `<li class="cart--product cart--product-${item.id}" data-id="${item.id}">${item.product} $${item.cost}</li>`;
+      inventory += this.renderItem(item);
     });
 
     const products = document.createRange().createContextualFragment(inventory);
 
-    // A little Janky. Find the proper way to do this
+    // A little Janky. Find the proper way to do this.
     this.$cart.innerHTML = "";
     this.$cart.appendChild(products);
   }
