@@ -11,7 +11,7 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
   background: $body-color;
-  color: white;
+  color: $text-color;
 }
 
 /* 😈 Breaking stuff now! 🚨*/
@@ -25,7 +25,6 @@ body {
 
 button {
   border: none;
-  color: #e9f1f7;
-  background: #2274a5;
-  /* background: none; */
+  color: $white;
+  background: $button-color;
 }
