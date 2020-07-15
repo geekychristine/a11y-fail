@@ -28,9 +28,8 @@ class Cart {
 
     const products = document.createRange().createContextualFragment(inventory);
 
-    console.warn("products:", products);
-    console.warn("cart:", cart);
-
+    // A little Janky. Find the proper way to do this
+    this.$cart.innerHTML = "";
     this.$cart.appendChild(products);
   }
 
@@ -38,6 +37,7 @@ class Cart {
     const cart = this.cart;
     cart.items.push(item);
     sessionStorage.setItem("cart", JSON.stringify(cart));
+    this.renderCart();
   }
 
   init() {
