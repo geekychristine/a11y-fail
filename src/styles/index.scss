@@ -1,4 +1,4 @@
-$body-color: #e5e7da;
+$body-color: #131b23;
 
 * {
   box-sizing: border-box;
@@ -27,6 +27,8 @@ body {
 
 button {
   border: none;
+  color: #e9f1f7;
+  background: #2274a5;
   /* background: none; */
 }
 
@@ -49,8 +51,9 @@ button {
 .product-container {
   display: block;
   padding: 40px;
+  margin: 40px;
   width: 50%;
-  background: #ccc;
+  background: #e7dfc6;
 }
 
 .product button {
@@ -64,7 +67,8 @@ button {
 .cart-container {
   display: block;
   padding: 40px;
+  margin: 40px;
   width: 50%;
   min-width: 300px;
-  background: #333;
+  background: #816c61;
 }
