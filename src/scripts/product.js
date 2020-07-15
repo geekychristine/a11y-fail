@@ -49,8 +49,6 @@ class Product {
   }
 
   addToCart(item) {
-    console.log("product item:", item);
-
     PubSub.publish("cart-add-item", item);
   }
 
