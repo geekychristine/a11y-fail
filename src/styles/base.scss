@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  background: $body-color;
+  color: white;
+}
+
+/* 😈 Breaking stuff now! 🚨*/
+
+/* Remove all focus indicators. */
+/* *:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+} */
+
+button {
+  border: none;
+  color: #e9f1f7;
+  background: #2274a5;
+  /* background: none; */
+}
