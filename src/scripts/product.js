@@ -1,4 +1,5 @@
 import store from "../data/data.json";
+import PubSub from "pubsub-js";
 
 class Product {
   constructor() {
@@ -10,6 +11,7 @@ class Product {
 
     this.handleClick = this.handleClick.bind(this);
     this.loadProducts = this.loadProducts.bind(this);
+    this.addToCart = this.addToCart.bind(this);
   }
 
   setupEventHandler() {
@@ -43,7 +45,13 @@ class Product {
       item => item.id === Number(productId)
     )[0];
 
-    console.warn("this.selectedProduct:", this.selectedProduct);
+    this.addToCart(this.selectedProduct);
+  }
+
+  addToCart(item) {
+    console.log("product item:", item);
+
+    PubSub.publish("cart-add-item", item);
   }
 
   init() {
