@@ -1,10 +1,11 @@
-$body-color: #5f6252;
+$body-color: #e5e7da;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 11px;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 body {
@@ -47,8 +48,8 @@ button {
 /* Products =========== */
 .product-container {
   display: block;
-  padding: 20px;
-  width: 80%;
+  padding: 40px;
+  width: 50%;
   background: #ccc;
 }
 
@@ -62,8 +63,8 @@ button {
 /* Cart =========== */
 .cart-container {
   display: block;
-  padding: 20px;
-  width: 20%;
+  padding: 40px;
+  width: 50%;
   min-width: 300px;
-  background: #abcdef;
+  background: #333;
 }
