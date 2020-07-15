@@ -22,11 +22,17 @@ class Product {
     });
   }
 
+  renderProduct(item) {
+    return `<div class="product product-${item.id}" data-id="${item.id}">
+    <button class="product-button">${item.product} $${item.cost}</button>
+    </div>`;
+  }
+
   renderProducts() {
     let inventory = "";
 
     store.forEach(item => {
-      inventory += `<div class="product product-${item.id}" data-id="${item.id}"><button>${item.product} $${item.cost}</button></div>`;
+      inventory += this.renderProduct(item);
     });
 
     const blob = document.createRange().createContextualFragment(inventory);
