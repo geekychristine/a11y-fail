@@ -1,15 +1,24 @@
 /* Products =========== */
-.product-container {
-  display: block;
-  padding: 40px;
-  margin: 40px;
-  width: 50%;
-  background: #e7dfc6;
-}
+.product {
+  &-inventory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
 
-.product button {
-  display: inline-block;
-  padding: 20px;
-  margin: 10px;
-  min-width: 40%;
+  &-container {
+    display: block;
+    padding: 40px;
+    margin: 40px;
+    width: 50%;
+    background: #e7dfc6;
+  }
+
+  &-button {
+    display: block;
+    padding: 20px;
+    min-width: 100%;
+    min-height: 100%;
+    background: $blue;
+  }
 }
