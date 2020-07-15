@@ -1,0 +1,4 @@
+*{box-sizing:border-box;margin:0;padding:0;font-size:18px;line-height:1.2}body{font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;background:#e9f1f7;color:#131b23}button{border:none;color:#e9f1f7;background:#2274a5}.cart-container{display:block;padding:40px;margin:40px;width:50%;min-width:300px;background:#816c61}.product-container{display:block;padding:40px;margin:40px;width:50%;background:#e7dfc6}.product button{display:inline-block;padding:20px;margin:10px;min-width:40%}.header{display:block;padding:30px;margin-bottom:50px;background:rgba(0,0,0,0.4);text-align:center}.layout{display:flex;flex:1 0 auto;justify-content:flex-start;align-items:flex-start}
+
+
+/*# sourceMappingURL=bundle.css.map*/
