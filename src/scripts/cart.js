@@ -1,8 +1,10 @@
 import PubSub from "pubsub-js";
+import round from "lodash/round";
 
 class Cart {
   constructor() {
     this.selector = "[data-cart]";
+    this.$cartTotal = document.querySelector("[data-cart-total]");
 
     // Create Session Storage Cart (Move this to cart.js eventually)
     const cart = { items: [], total: 0.0 };
@@ -20,6 +22,11 @@ class Cart {
     return `<li class="cart--product cart--product-${item.id}" data-id="${item.id}">
         ${item.product} $${item.cost}
       </li>`;
+  }
+
+  renderTotal(total) {
+    const totalNode = total && `$${total.toFixed(2)}`;
+    this.$cartTotal.innerHTML = totalNode;
   }
 
   renderCart() {
@@ -40,14 +47,28 @@ class Cart {
 
   updateCart(msg, item) {
     const cart = this.cart;
+
     cart.items.push(item);
+
+    // Update total
+    const total = cart.items.reduce((total, item) => {
+      total += item.cost;
+      return round(total, 2);
+    }, 0);
+
+    cart.total = total;
+
+    // Update store with latest cart data
     sessionStorage.setItem("cart", JSON.stringify(cart));
+
     this.renderCart();
+    this.renderTotal(cart.total);
   }
 
   init() {
     this.$cart = document.querySelector(this.selector);
-    // Event
+
+    // Events
     PubSub.subscribe("cart-add-item", this.updateCart);
   }
 }
