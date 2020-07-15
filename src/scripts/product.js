@@ -24,7 +24,10 @@ class Product {
 
   renderProduct(item) {
     return `<div class="product product-${item.id}" data-id="${item.id}">
-    <button class="product-button">${item.product} $${item.cost}</button>
+    <button class="product-button">
+      <span class="product-name">${item.product}</span>
+      <span class="product-cost">$${item.cost}</span>
+    </button>
     </div>`;
   }
 

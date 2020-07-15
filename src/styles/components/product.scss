@@ -6,19 +6,25 @@
     grid-gap: 10px;
   }
 
-  &-container {
-    display: block;
-    padding: 40px;
-    margin: 40px;
-    width: 50%;
-    background: #e7dfc6;
-  }
-
   &-button {
     display: block;
     padding: 20px;
     min-width: 100%;
     min-height: 100%;
     background: $blue;
+  }
+
+  &-name {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  &-cost {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
   }
 }
