@@ -24,7 +24,7 @@ class Product {
     let inventory = "";
 
     store.forEach(item => {
-      inventory += `<div class="product product-${item.id}" data-id="${item.id}"><button>${item.product} ${item.cost}</button></div>`;
+      inventory += `<div class="product product-${item.id}" data-id="${item.id}"><button>${item.product} $${item.cost}</button></div>`;
     });
 
     const blob = document.createRange().createContextualFragment(inventory);
