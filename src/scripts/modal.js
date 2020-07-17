@@ -52,9 +52,8 @@ class Modal {
         if (event.target === this.$modal[0]) {
           event.preventDefault();
 
-          this.$modal[0].classList.toggle("tco-show-modal");
+          this.$modal[0].classList.toggle("show-modal");
           document.documentElement.style.overflow = "";
-          this.createCookie("campaign_submitted", "true", 30);
         }
       },
       false
@@ -88,10 +87,8 @@ class Modal {
       );
 
       this.$modal = document.querySelectorAll("[data-modal]");
-      this.$topTrap = document.getElementById("tco-floater-modal-focus-top");
-      this.$bottomTrap = document.getElementById(
-        "tco-floater-modal-focus-bottom"
-      );
+      this.$topTrap = document.getElementById("modal-focus-top");
+      this.$bottomTrap = document.getElementById("modal-focus-bottom");
 
       // Only instantiate if modal exists
       if (this.$modal.length) {
