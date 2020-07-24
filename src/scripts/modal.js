@@ -1,7 +1,7 @@
 class Modal {
   constructor() {
-    this.$modalTriggerToggle;
-    this.$modalTriggerClose;
+    this.$modalTrigger;
+    this.$modalClose;
     this.$modal;
     this.$topTrap;
     this.$bottomTrap;
@@ -15,7 +15,7 @@ class Modal {
     let firstFocusable = focusable[0];
     let lastFocusable = focusable[focusable.length - 1];
 
-    this.$modalTriggerToggle.forEach(el =>
+    this.$modalTrigger.forEach(el =>
       el.addEventListener(
         "click",
         event => {
@@ -24,6 +24,7 @@ class Modal {
           console.warn("Showing Modal...");
 
           this.$modal[0].classList.toggle("show-modal");
+
           // Setting overflow:hidden on the <html> element prevents scrolling while also
           // preserving the scroll position.
           document.documentElement.style.overflow =
@@ -35,7 +36,7 @@ class Modal {
       )
     );
 
-    this.$modalTriggerClose.forEach(el =>
+    this.$modalClose.forEach(el =>
       el.addEventListener(
         "click",
         event => {
@@ -81,19 +82,25 @@ class Modal {
   }
 
   init() {
-    document.addEventListener("DOMContentLoaded", () => {
-      this.$modalTriggerToggle = document.querySelectorAll(
+    document.addEventListener("DOMContentLoaded", event => {
+      console.log("dom loaded", event);
+
+      this.$modal = document.querySelectorAll("[data-modal]");
+      this.$modalClose = document.querySelectorAll("[data-modal-close]");
+      this.$modalTrigger = document.querySelectorAll(
         "[data-modal-trigger-toggle]"
       );
 
-      this.$modalTriggerClose = document.querySelectorAll(
+      console.log(this.$modalTrigger);
+
+      this.$modalClose = document.querySelectorAll(
         "[data-modal-trigger-close]"
       );
 
-      this.$modal = document.querySelectorAll("[data-modal]");
-      this.$modal = document.querySelectorAll("[data-modal]");
       // this.$topTrap = document.getElementById("modal-focus-top");
       // this.$bottomTrap = document.getElementById("modal-focus-bottom");
+
+      console.log("this.$modal:", this.$modal);
 
       // Only instantiate if modal exists
       if (this.$modal.length) {
