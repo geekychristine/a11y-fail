@@ -20,5 +20,4 @@ class App {
 }
 
 // Run the App
-const app = new App();
-app.init();
+export default App;

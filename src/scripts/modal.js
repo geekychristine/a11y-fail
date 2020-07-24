@@ -21,6 +21,8 @@ class Modal {
         event => {
           event.preventDefault();
 
+          console.warn("Showing Modal...");
+
           this.$modal[0].classList.toggle("show-modal");
           // Setting overflow:hidden on the <html> element prevents scrolling while also
           // preserving the scroll position.
@@ -59,21 +61,23 @@ class Modal {
       false
     );
 
-    this.$topTrap.addEventListener(
-      "focus",
-      () => {
-        lastFocusable.focus();
-      },
-      false
-    );
+    // this.$topTrap.addEventListener(
+    //   "focus",
+    //   () => {
+    //     lastFocusable.focus();
+    //   },
+    //   false
+    // );
 
-    this.$bottomTrap.addEventListener(
-      "focus",
-      () => {
-        firstFocusable.focus();
-      },
-      false
-    );
+    // this.$bottomTrap.addEventListener(
+    //   "focus",
+    //   () => {
+    //     firstFocusable.focus();
+    //   },
+    //   false
+    // );
+
+    console.log("done setting up handler for modal");
   }
 
   init() {
@@ -87,8 +91,9 @@ class Modal {
       );
 
       this.$modal = document.querySelectorAll("[data-modal]");
-      this.$topTrap = document.getElementById("modal-focus-top");
-      this.$bottomTrap = document.getElementById("modal-focus-bottom");
+      this.$modal = document.querySelectorAll("[data-modal]");
+      // this.$topTrap = document.getElementById("modal-focus-top");
+      // this.$bottomTrap = document.getElementById("modal-focus-bottom");
 
       // Only instantiate if modal exists
       if (this.$modal.length) {
@@ -98,4 +103,4 @@ class Modal {
   }
 }
 
-export { Modal };
+export default Modal;
