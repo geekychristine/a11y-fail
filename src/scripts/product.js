@@ -23,8 +23,14 @@ class Product {
   }
 
   renderProduct(item) {
+    const productNameSplit = item.product
+      .replace(/[\,0-9-_\s+]+/, " ")
+      .split(" ");
+    const searchTerms = productNameSplit.join("/").toLowerCase();
+
     return `<div class="product product-${item.id}" data-id="${item.id}">
     <button class="product-button">
+      <span class="product-image"><img src="https://source.unsplash.com/featured/200?${searchTerms}" alt="${item.alt}" /></span>
       <span class="product-name">${item.product}</span>
       <span class="product-cost">$${item.cost}</span>
     </button>
