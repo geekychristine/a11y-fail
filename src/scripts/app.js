@@ -1,6 +1,6 @@
 import Product from "./product";
 import Cart from "./cart";
-// import Modal from "./modal";
+import Modal from "./modal";
 
 class App {
   init() {
@@ -13,11 +13,10 @@ class App {
       const cart = new Cart();
       cart.init();
 
-      // const modal = new Modal();
-      // modal.init();
+      const modal = new Modal();
+      modal.init();
     };
   }
 }
 
-// Run the App
 export default App;
