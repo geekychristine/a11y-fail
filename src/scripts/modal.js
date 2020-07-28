@@ -21,8 +21,6 @@ class Modal {
         event => {
           event.preventDefault();
 
-          console.warn("Showing Modal...");
-
           this.$modal[0].classList.toggle("show-modal");
 
           // Setting overflow:hidden on the <html> element prevents scrolling while also
@@ -77,36 +75,36 @@ class Modal {
     //   },
     //   false
     // );
+  }
 
-    console.log("done setting up handler for modal");
+  setupModal() {
+    this.$modal = document.querySelectorAll("[data-modal]");
+    this.$modalClose = document.querySelectorAll("[data-modal-close]");
+    this.$modalTrigger = document.querySelectorAll(
+      "[data-modal-trigger-toggle]"
+    );
+
+    this.$modalClose = document.querySelectorAll("[data-modal-trigger-close]");
+
+    // this.$topTrap = document.getElementById("modal-focus-top");
+    // this.$bottomTrap = document.getElementById("modal-focus-bottom");
+
+    // Only instantiate if modal exists
+    if (this.$modal.length) {
+      this.setupEventHandler();
+    }
   }
 
   init() {
-    document.addEventListener("DOMContentLoaded", event => {
-      console.log("dom loaded", event);
-
-      this.$modal = document.querySelectorAll("[data-modal]");
-      this.$modalClose = document.querySelectorAll("[data-modal-close]");
-      this.$modalTrigger = document.querySelectorAll(
-        "[data-modal-trigger-toggle]"
-      );
-
-      console.log(this.$modalTrigger);
-
-      this.$modalClose = document.querySelectorAll(
-        "[data-modal-trigger-close]"
-      );
-
-      // this.$topTrap = document.getElementById("modal-focus-top");
-      // this.$bottomTrap = document.getElementById("modal-focus-bottom");
-
-      console.log("this.$modal:", this.$modal);
-
-      // Only instantiate if modal exists
-      if (this.$modal.length) {
-        this.setupEventHandler();
-      }
-    });
+    // Document is already ready, just execute code here
+    if (document.readyState !== "loading") {
+      this.setupModal();
+    } else {
+      // Document was not ready, execute here
+      document.addEventListener("DOMContentLoaded", function() {
+        this.setupModal();
+      });
+    }
   }
 }
 
