@@ -1,6 +1,6 @@
 // Modal =========================
 .modal {
-  // display: none;
+  display: none;
   // need position set on element for z-index to work.
   position: relative;
   width: auto;
@@ -15,7 +15,7 @@
   position: absolute;
   overflow-y: auto;
   overflow-x: hidden;
-  color: $white;
+  color: $text-color;
   background-color: $ice-blue;
   width: 100vw;
   height: 100vh;
@@ -24,6 +24,7 @@
 }
 
 .show-modal {
+  display: block;
   position: fixed;
   top: 0;
   width: 100%;
@@ -42,6 +43,7 @@
 
   .floater-btn-close {
     display: inline-block;
+    font-size: 10px;
   }
 }
 /* stylelint-disable selector-no-qualifying-type, selector-max-specificity */

@@ -1,0 +1,10 @@
+.btn {
+  @include spacing-inset(8px);
+  @include border-radius();
+  line-height: 1;
+
+  &--link {
+    background: none;
+    color: $text-color;
+  }
+}

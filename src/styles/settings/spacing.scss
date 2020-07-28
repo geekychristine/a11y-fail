@@ -1,0 +1,7 @@
+@mixin spacing-inset($size) {
+  padding: $size;
+}
+
+@mixin spacing-squish($orientation) {
+  padding: $orientation;
+}
