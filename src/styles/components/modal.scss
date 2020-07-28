@@ -20,7 +20,7 @@
   width: 100vw;
   height: 100vh;
   border-radius: 4px;
-  padding: 40px;
+  padding: 140px;
 }
 
 .show-modal {
@@ -35,10 +35,6 @@
     visibility: visible;
     transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  }
-
-  .floater-btn-chat {
-    display: none;
   }
 
   .floater-btn-close {
@@ -63,4 +59,5 @@ body.shift {
 
 .modal-footer {
   margin-top: 40px;
+  text-align: center;
 }

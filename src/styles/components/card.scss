@@ -1,8 +1,7 @@
 .card {
+  @include containers();
   display: block;
-  padding: 40px;
   margin: 40px;
   width: 50%;
   background: $white;
-  box-shadow: rgba(0, 0, 0, 0.2);
 }
