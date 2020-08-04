@@ -10,7 +10,7 @@ const getStore = () => {
 };
 
 const renderProduct = item => {
-  const imgPath = "src/img/";
+  const imgPath = "/src/img/";
 
   return `<div class="product product-${item.id}" data-id="${item.id}">
     <button class="product-button">
