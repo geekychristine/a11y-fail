@@ -5,12 +5,11 @@ class Product {
   constructor() {
     this.selector = ".product";
     this.$productNodes;
-    this.$store;
+    this.store = utils.getStore() || [];
     this.$product;
     this.selectedProduct;
 
     this.handleClick = this.handleClick.bind(this);
-    // this.loadProducts = this.loadProducts.bind(this);
     this.addToCart = this.addToCart.bind(this);
   }
 
@@ -22,20 +21,9 @@ class Product {
     });
   }
 
-  // loadProducts(targetContainer) {
-  //   const products = utils.renderProducts();
-  //   console.warn("products:", products);
-
-  //   console.warn("targetContainer:", targetContainer);
-
-  //   [...this.$inventory].forEach(container => {
-  //     container.appendChild(products);
-  //   });
-  // }
-
   handleClick(event) {
     const productId = event.currentTarget.dataset.id;
-    this.selectedProduct = store.filter(
+    this.selectedProduct = this.store.filter(
       item => item.id === Number(productId)
     )[0];
 

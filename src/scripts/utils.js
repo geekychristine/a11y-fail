@@ -1,15 +1,24 @@
 import PubSub from "pubsub-js";
 import rawStore from "../data/data.json";
 
+const getStore = () => {
+  const store = sessionStorage.getItem("store") || rawStore;
+  if (typeof store === "string") {
+    return JSON.parse(store);
+  }
+  return store;
+};
+
 const renderProduct = item => {
   const productNameSplit = item.product
     .replace(/[\,0-9-_\s+]+/, " ")
     .split(" ");
   const searchTerms = productNameSplit.join("/").toLowerCase();
+  const unsplashUrl = "https://source.unsplash.com/featured/200?food,";
 
   return `<div class="product product-${item.id}" data-id="${item.id}">
     <button class="product-button">
-      <span class="product-image"><img src="https://source.unsplash.com/featured/200?${searchTerms}" alt="${item.alt}" /></span>
+      <span class="product-image"><img src="${unsplashUrl}${searchTerms}" alt="${item.alt}" /></span>
       <span class="product-name">${item.product}</span>
       <span class="product-cost">$${item.cost}</span>
     </button>
@@ -17,11 +26,8 @@ const renderProduct = item => {
 };
 
 const renderProducts = () => {
-  console.warn("running RenderProducts():");
   let inventory = "";
-  let store = sessionStorage.getItem("store") || rawStore;
-
-  store = JSON.parse(store);
+  const store = getStore();
 
   store.forEach(item => {
     inventory += renderProduct(item);
@@ -41,9 +47,7 @@ const renderProducts = () => {
 const loadProducts = containers => {
   const products = renderProducts();
 
-  console.warn("containers:", containers);
-
   containers.forEach(container => container.appendChild(products));
 };
 
-export default { loadProducts, renderProduct, renderProducts };
+export default { getStore, loadProducts, renderProduct, renderProducts };
