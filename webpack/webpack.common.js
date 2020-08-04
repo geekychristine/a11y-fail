@@ -7,7 +7,7 @@ module.exports = {
     app: Path.resolve(__dirname, "../src/scripts/index.js")
   },
   output: {
-    publicPath: "/src/",
+    publicPath: "/",
     path: Path.join(__dirname, "../public"),
     filename: "js/[name].js"
   },
