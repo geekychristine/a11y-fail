@@ -1,5 +1,5 @@
-import store from "../data/data.json";
 import PubSub from "pubsub-js";
+import utils from "./utils";
 
 class Product {
   constructor() {
@@ -10,7 +10,7 @@ class Product {
     this.selectedProduct;
 
     this.handleClick = this.handleClick.bind(this);
-    this.loadProducts = this.loadProducts.bind(this);
+    // this.loadProducts = this.loadProducts.bind(this);
     this.addToCart = this.addToCart.bind(this);
   }
 
@@ -22,37 +22,16 @@ class Product {
     });
   }
 
-  renderProduct(item) {
-    const productNameSplit = item.product
-      .replace(/[\,0-9-_\s+]+/, " ")
-      .split(" ");
-    const searchTerms = productNameSplit.join("/").toLowerCase();
+  // loadProducts(targetContainer) {
+  //   const products = utils.renderProducts();
+  //   console.warn("products:", products);
 
-    return `<div class="product product-${item.id}" data-id="${item.id}">
-    <button class="product-button">
-      <span class="product-image"><img src="https://source.unsplash.com/featured/200?${searchTerms}" alt="${item.alt}" /></span>
-      <span class="product-name">${item.product}</span>
-      <span class="product-cost">$${item.cost}</span>
-    </button>
-    </div>`;
-  }
+  //   console.warn("targetContainer:", targetContainer);
 
-  renderProducts() {
-    let inventory = "";
-
-    store.forEach(item => {
-      inventory += this.renderProduct(item);
-    });
-
-    const blob = document.createRange().createContextualFragment(inventory);
-    return blob;
-  }
-
-  loadProducts() {
-    const products = this.renderProducts();
-
-    this.$inventory.appendChild(products);
-  }
+  //   [...this.$inventory].forEach(container => {
+  //     container.appendChild(products);
+  //   });
+  // }
 
   handleClick(event) {
     const productId = event.currentTarget.dataset.id;
@@ -68,9 +47,9 @@ class Product {
   }
 
   init() {
-    this.$inventory = document.querySelector("[data-inventory]");
+    this.$inventory = document.querySelectorAll("[data-inventory]");
 
-    this.loadProducts();
+    utils.loadProducts(this.$inventory);
     this.setupEventHandler();
   }
 }

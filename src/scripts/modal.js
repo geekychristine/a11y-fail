@@ -1,20 +1,13 @@
+import utils from "./utils";
+
 class Modal {
   constructor() {
     this.$modalTrigger;
     this.$modalClose;
     this.$modal;
-    this.$topTrap;
-    this.$bottomTrap;
   }
 
   setupEventHandler() {
-    let focusable = this.$modal[0].querySelectorAll(
-      "button, [href], input, select, textarea"
-    );
-
-    let firstFocusable = focusable[0];
-    let lastFocusable = focusable[focusable.length - 1];
-
     this.$modalTrigger.forEach(el =>
       el.addEventListener(
         "click",
@@ -59,22 +52,6 @@ class Modal {
       },
       false
     );
-
-    // this.$topTrap.addEventListener(
-    //   "focus",
-    //   () => {
-    //     lastFocusable.focus();
-    //   },
-    //   false
-    // );
-
-    // this.$bottomTrap.addEventListener(
-    //   "focus",
-    //   () => {
-    //     firstFocusable.focus();
-    //   },
-    //   false
-    // );
   }
 
   setupModal() {
@@ -83,11 +60,12 @@ class Modal {
     this.$modalTrigger = document.querySelectorAll(
       "[data-modal-trigger-toggle]"
     );
-
+    this.$modalProducts = document.querySelectorAll("[data-modal-products]");
     this.$modalClose = document.querySelectorAll("[data-modal-trigger-close]");
 
-    // this.$topTrap = document.getElementById("modal-focus-top");
-    // this.$bottomTrap = document.getElementById("modal-focus-bottom");
+    if (this.$modalProducts.length) {
+      utils.loadProducts(this.$modalProducts);
+    }
 
     // Only instantiate if modal exists
     if (this.$modal.length) {
