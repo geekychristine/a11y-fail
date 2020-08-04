@@ -10,15 +10,11 @@ const getStore = () => {
 };
 
 const renderProduct = item => {
-  const productNameSplit = item.product
-    .replace(/[\,0-9-_\s+]+/, " ")
-    .split(" ");
-  const searchTerms = productNameSplit.join("/").toLowerCase();
-  const unsplashUrl = "https://source.unsplash.com/featured/200?food,";
+  const imgPath = "src/img/";
 
   return `<div class="product product-${item.id}" data-id="${item.id}">
     <button class="product-button">
-      <span class="product-image"><img src="${unsplashUrl}${searchTerms}" alt="${item.alt}" /></span>
+      <span class="product-image"><img src="${imgPath}${item.img}.jpg" alt="${item.alt}" /></span>
       <span class="product-name">${item.product}</span>
       <span class="product-cost">$${item.cost}</span>
     </button>

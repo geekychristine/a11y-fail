@@ -1,128 +1,86 @@
 [
   {
     "id": 0,
-    "product": "Gritty Orange Sherbert",
+    "product": "Orange Sherbert",
+    "img": "orange-sherbert",
     "cost": 7.77,
     "alt": "Occaecat exercitation in qui qui pariatur nisi consequat sunt sint cupidatat minim adipisicing nulla enim."
   },
   {
     "id": 1,
-    "product": "Pie Pecan",
+    "product": "Blueberry Sherbert",
+    "img": "blueberry-sherbert",
     "cost": 6.76,
     "alt": "Laboris minim anim eu aute qui amet."
   },
   {
     "id": 2,
-    "product": "Ice Cream - Strawberry",
+    "product": "Raspberry",
+    "img": "raspberry",
     "cost": 4.17,
     "alt": "Cupidatat commodo nisi id occaecat fugiat nostrud eu adipisicing."
   },
   {
     "id": 3,
-    "product": "Soup - Campbells Beef Noodle",
+    "product": "Cookies & Cream",
+    "img": "cookies-cream",
     "cost": 5.56,
     "alt": "Incididunt reprehenderit culpa veniam Lorem reprehenderit ut amet proident."
   },
   {
     "id": 4,
-    "product": "Olives - Kalamata",
+    "product": "Chocolate",
+    "img": "chocolate",
     "cost": 7.98,
     "alt": "Id pariatur aute officia eu enim aliquip aute consectetur eu est."
   },
   {
     "id": 5,
-    "product": "Fish - Artic Char, Cold Smoked",
+    "product": "Butterscotch",
+    "img": "butterscotch",
     "cost": 9.28,
     "alt": "Non exercitation nulla nulla dolor aliqua est sint esse culpa dolor et."
   },
   {
     "id": 6,
-    "product": "Kale - Red",
+    "product": "Peanut Butter",
+    "img": "peanut-butter",
     "cost": 3.78,
     "alt": "Ad sunt incididunt laborum tempor."
   },
   {
     "id": 7,
-    "product": "Asparagus - White, Fresh",
+    "product": "Pistachio",
+    "img": "pistachio",
     "cost": 5.31,
     "alt": "Anim sint in consequat Lorem culpa ex exercitation et."
   },
   {
     "id": 8,
-    "product": "Wine - Valpolicella Masi",
-    "cost": 12.91,
-    "alt": "In excepteur consectetur fugiat ullamco velit exercitation magna enim mollit esse culpa."
+    "product": "Green Tea",
+    "img": "green-tea",
+    "cost": 5.68,
+    "alt": "Anim sint in consequat Lorem culpa ex exercitation et."
   },
   {
     "id": 9,
-    "product": "Mustard Prepared",
-    "cost": 1.97,
-    "alt": "Elit est quis minim Lorem quis."
+    "product": "Rocky Road",
+    "img": "rocky-road",
+    "cost": 7.64,
+    "alt": "Anim sint in consequat Lorem culpa ex exercitation et."
   },
   {
     "id": 10,
-    "product": "Truffle Paste",
-    "cost": 3.25,
-    "alt": "Ea voluptate cillum pariatur laboris duis minim reprehenderit sit dolor proident mollit incididunt dolor."
+    "product": "Salted Caramel",
+    "img": "salted-caramel",
+    "cost": 6.43,
+    "alt": "Non exercitation nulla nulla dolor aliqua est sint esse culpa."
   },
   {
     "id": 11,
-    "product": "Bread - Crusty Italian Poly",
-    "cost": 7.72,
-    "alt": "Officia commodo exercitation duis cillum mollit aliquip deserunt nostrud sit tempor officia pariatur cillum."
-  },
-  {
-    "id": 12,
-    "product": "Table Cloth 90x90 Colour",
-    "cost": 8.02,
-    "alt": "Minim proident ad reprehenderit cillum id commodo consequat id aute."
-  },
-  {
-    "id": 13,
-    "product": "Pear - Packum",
-    "cost": 9.74,
-    "alt": "Magna non aute fugiat laboris esse officia in laborum."
-  },
-  {
-    "id": 14,
-    "product": "Toothpick Frilled",
-    "cost": 5.84,
-    "alt": "Culpa cupidatat esse laborum cupidatat anim culpa dolore Lorem reprehenderit."
-  },
-  {
-    "id": 15,
-    "product": "Juice - Happy Planet",
-    "cost": 5.89,
-    "alt": "Sint est duis ut et do sit minim nostrud non fugiat id ullamco pariatur."
-  },
-  {
-    "id": 16,
-    "product": "Soup Campbells Beef With Veg",
-    "cost": 2.48,
-    "alt": "Aliquip pariatur proident in aliqua voluptate ex pariatur veniam anim sint amet veniam nulla."
-  },
-  {
-    "id": 17,
-    "product": "Compound - Strawberry",
-    "cost": 4.02,
-    "alt": "Amet quis ut eiusmod tempor reprehenderit qui Lorem."
-  },
-  {
-    "id": 18,
-    "product": "Wine - Zinfandel Rosenblum",
-    "cost": 13.22,
-    "alt": "Laboris cillum cillum commodo aute officia nisi nulla."
-  },
-  {
-    "id": 19,
-    "product": "Lid - Translucent, 3.5 And 6 Oz",
-    "cost": 4.47,
-    "alt": "Laboris adipisicing pariatur quis qui adipisicing amet nulla minim nisi veniam culpa."
-  },
-  {
-    "id": 20,
-    "product": "Apple - Granny Smith",
-    "cost": 5.61,
-    "alt": "Eu sint laboris laboris ut."
+    "product": "Coconut",
+    "img": "coconut",
+    "cost": 5.12,
+    "alt": "Dolor aliqua est sint esse culpa."
   }
 ]
