@@ -5,3 +5,8 @@
 @mixin spacing-squish($orientation) {
   padding: $orientation;
 }
+
+$spacing-stack-8: 8px;
+$spacing-stack-12: 12px;
+$spacing-stack-24: 24px;
+$spacing-stack-36: 36px;

@@ -7,10 +7,9 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Roboto", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
-  background: url("/src/img/memphis-pattern.jpg") repeat;
+  background: $ice-blue url("/src/img/memphis-pattern.jpg") repeat;
   color: $text-color;
 }
 
