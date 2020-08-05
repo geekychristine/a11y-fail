@@ -24,23 +24,30 @@ module.exports = {
     })
   ],
   resolve: {
-    alias: {
-      "~": Path.resolve(__dirname, "../src")
-    }
+    modules: ["node_modules", "src"]
   },
   module: {
     rules: [
       {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: "javascript/auto"
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          "babel-loader",
+          {
+            loader: "eslint-loader",
+            options: {
+              fix: true
+            }
+          }
+        ]
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
           loader: "file-loader",
           options: {
-            name: "[path][name].[ext]"
+            outputPath: "img",
+            name: "[name].[ext]"
           }
         }
       }
