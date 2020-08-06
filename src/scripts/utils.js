@@ -14,9 +14,11 @@ const renderProduct = item => {
 
   return `<div class="product product-${item.id}" data-id="${item.id}">
     <button class="product-button">
-      <span class="product-image"><img src="${imgPath}${item.img}.jpg" alt="${item.alt}" /></span>
-      <span class="product-name">${item.product}</span>
-      <span class="product-cost">$${item.cost}</span>
+      <div class="product-image"><img src="${imgPath}${item.img}.jpg" alt="${item.alt}" /></div>
+      <div class="product-info">
+        <span class="product-name">${item.product}</span>
+        <span class="product-cost">$${item.cost}</span>
+      </div>
     </button>
     </div>`;
 };

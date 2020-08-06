@@ -1,13 +1,13 @@
-$brown: #816c61;
-$navy: #131b23;
-$ice-blue: #e9f1f7;
-$beige: #e7dfc6;
-$blue: #2274a5;
-$white: #fff;
+$purple: #5d576b;
+$blue: #99e1d9;
+$blue-shade: darken(#99e1d9, 100%);
+$beige: #fffae3;
+$pink: #fcfcfc;
+$white: #fcfcfc;
 
-$body-color: $ice-blue;
-$text-color: $navy;
-$button-color: $blue;
+$body-color: $blue;
+$text-color: $purple;
+$button-color: $purple;
 
 @mixin containers {
   padding: 40px;
