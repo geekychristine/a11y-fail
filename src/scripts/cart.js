@@ -19,9 +19,9 @@ class Cart {
   }
 
   renderItem(item) {
-    return `<li class="cart--product cart--product-${item.id}" data-id="${item.id}">
-        ${item.product} $${item.cost}
-      </li>`;
+    return `<p class="cart--product cart--product-${item.id}" data-id="${item.id}">
+        ${item.product} <span class="cart--product-price">$${item.cost}</span>
+      </p>`;
   }
 
   renderTotal(total) {

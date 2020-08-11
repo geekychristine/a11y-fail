@@ -1,9 +1,34 @@
 /* Cart =========== */
 .cart-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 40px;
   margin: 40px;
   width: 50%;
   min-width: 300px;
   background: $white;
+}
+
+.cart-list {
+  margin: auto 0;
+  list-style: none;
+}
+
+.cart--product {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.cart--product-price {
+  margin-left: auto;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px dotted $purple;
+  margin-top: 20px;
+  padding-top: 20px;
 }
