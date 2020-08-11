@@ -3,7 +3,7 @@ import utils from "./utils";
 
 class Product {
   constructor() {
-    this.selector = ".product";
+    this.selector = ".product-button";
     this.$productNodes;
     this.store = utils.getStore() || [];
     this.$product;
