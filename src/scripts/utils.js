@@ -1,5 +1,6 @@
 import PubSub from "pubsub-js";
 import rawStore from "../data/data.json";
+const isProd = process.env.NODE_ENV === "production";
 
 const getStore = () => {
   const store = sessionStorage.getItem("store") || rawStore;
@@ -10,7 +11,7 @@ const getStore = () => {
 };
 
 const renderProduct = item => {
-  const imgPath = "/src/img/";
+  const imgPath = "img/";
 
   return `<div class="product product-${item.id}">
     <div class="product-item" style="background-image:url('${imgPath}${item.img}.jpg')">

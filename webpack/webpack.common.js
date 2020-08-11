@@ -2,13 +2,14 @@ const Path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: {
     app: Path.resolve(__dirname, "../src/scripts/index.js")
   },
   output: {
-    publicPath: "/",
+    publicPath: isProd ? "/a11y-fail" : "/",
     path: Path.join(__dirname, "../public"),
     filename: "js/[name].js"
   },
