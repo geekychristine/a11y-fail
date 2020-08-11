@@ -1,4 +1,4 @@
-const Path = require("path");
+const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -6,11 +6,11 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: {
-    app: Path.resolve(__dirname, "../src/scripts/index.js")
+    app: path.resolve(__dirname, "../src/scripts/index.js")
   },
   output: {
     publicPath: isProd ? "/a11y-fail" : "/",
-    path: Path.join(__dirname, "../public"),
+    path: path.join(__dirname, "../public"),
     filename: "js/[name].js"
   },
   optimization: {
@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, "../src/index.html")
+      template: path.resolve(__dirname, "../src/index.html")
     }),
     new CopyPlugin({
       patterns: [{ from: "src/img", to: "img" }]
