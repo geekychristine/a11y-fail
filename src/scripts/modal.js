@@ -65,6 +65,8 @@ class Modal {
 
     if (this.$modalProducts.length) {
       utils.loadProducts(this.$modalProducts);
+      utils.loadProducts(this.$modalProducts);
+      utils.loadProducts(this.$modalProducts);
     }
 
     // Only instantiate if modal exists

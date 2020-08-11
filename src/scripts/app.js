@@ -15,6 +15,9 @@ class App {
 
       const modal = new Modal();
       modal.init();
+
+      const instructions = document.getElementById("modal-intro");
+      instructions.style.display = "block";
     };
   }
 }

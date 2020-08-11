@@ -27,3 +27,23 @@ button {
   color: $white;
   background: $button-color;
 }
+
+[data-modal-intro] {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.instructions {
+  display: block;
+  background: $white !important;
+  width: 80%;
+  margin: 20px auto !important;
+
+  .heading {
+    margin-top: 20px;
+  }
+  p {
+    margin: 10px 0;
+  }
+}
