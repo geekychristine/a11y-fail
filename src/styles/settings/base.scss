@@ -18,11 +18,11 @@ body {
 /* 😈 Breaking stuff now! 🚨*/
 
 /* Remove all focus indicators. */
-/* *:focus {
+*:focus {
   box-shadow: none;
   border: none;
-  outline: none;
-} */
+  outline: 2px dotted rgba(0, 0, 0, 0.3);
+}
 
 button {
   border: none;
@@ -37,15 +37,26 @@ button {
 }
 
 .instructions {
-  display: block;
+  display: flex !important;
+  justify-content: flex-start;
   background: $white !important;
   width: 80%;
   margin: 20px auto !important;
+  padding: 0 !important;
+
+  div {
+    width: 50%;
+    padding: 20px 40px;
+  }
 
   .heading {
     margin-top: 20px;
   }
   p {
     margin: 10px 0;
+  }
+
+  code {
+    font-family: monospace;
   }
 }

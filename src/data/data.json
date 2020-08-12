@@ -46,7 +46,8 @@
     "product": "Peanut Butter",
     "img": "peanut-butter",
     "cost": 3.78,
-    "alt": "Ad sunt incididunt laborum tempor."
+    "alt": "Ad sunt incididunt laborum tempor.",
+    "tabindex": "-1"
   },
   {
     "id": 7,
@@ -74,7 +75,8 @@
     "product": "Salted Caramel",
     "img": "salted-caramel",
     "cost": 6.43,
-    "alt": "Non exercitation nulla nulla dolor aliqua est sint esse culpa."
+    "alt": "Non exercitation nulla nulla dolor aliqua est sint esse culpa.",
+    "tabindex": "2"
   },
   {
     "id": 11,

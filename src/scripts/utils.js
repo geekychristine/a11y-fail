@@ -13,8 +13,13 @@ const getStore = () => {
 const renderProduct = item => {
   const imgPath = "img/";
 
-  return `<div class="product product-${item.id}">
-    <div class="product-item" style="background-image:url('${imgPath}${item.img}.jpg')">
+  console.warn("item:", item.tabindex);
+
+  return `<div class="product product-${item.id}" tabindex="${item.tabindex ||
+    0}">
+    <div class="product-item" style="background-image:url('${imgPath}${
+    item.img
+  }.jpg')">
       <div class="product-info">
         <span class="product-name">${item.product}</span>
         <span class="product-cost">$${item.cost}</span>
